@@ -98,22 +98,30 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form>
+      <form className="wallet-form">
         <label htmlFor="valor">
-          Valor:
-          <input type="number" name="valor" id="valor" onChange={ this.HandleValor } />
+          {/* Valor: */}
+          <input 
+            placeholder="Valor"
+            className="wallet-input"
+            type="number" 
+            name="valor" 
+            id="valor" 
+            onChange={ this.HandleValor } />
         </label>
 
         <label htmlFor="moeda">
-          Moeda:
-          <select id="moeda" onChange={ this.HandleMoeda }>
+          {/* Moeda: */}
+          <select id="moeda" onChange={ this.HandleMoeda } className="wallet-input">
+            <option hidden>Moeda</option>
             { this.HandleMoedaOption() }
           </select>
         </label>
 
         <label htmlFor="pag">
-          Método de pagamento:
-          <select id="pag" onChange={ this.HandlePag }>
+          {/* Método de pagamento: */}
+          <select id="pag" onChange={ this.HandlePag } className="wallet-input">
+            <option hidden>Método de pagamento</option>
             <option value="Dinheiro"> Dinheiro </option>
             <option value="Cartão de crédito"> Cartão de crédito </option>
             <option value="Cartão de débito"> Cartão de débito </option>
@@ -121,8 +129,9 @@ class Form extends React.Component {
         </label>
 
         <label htmlFor="tag">
-          Tag:
-          <select id="tag" onChange={ this.HandleTag }>
+          {/* Tag: */}
+          <select id="tag" onChange={ this.HandleTag } className="wallet-input">
+            <option hidden>Tag</option>
             <option value="Alimentação"> Alimentação </option>
             <option value="Lazer"> Lazer </option>
             <option value="Trabalho"> Trabalho </option>
@@ -132,8 +141,13 @@ class Form extends React.Component {
         </label>
 
         <label htmlFor="descrição">
-          Descrição:
-          <textarea type="text" id="descrição" onChange={ this.HandleDescricao } />
+          {/* Descrição: */}
+          <textarea
+            placeholder="Descrição"
+            className="wallet-input"
+            type="text" 
+            id="descrição" 
+            onChange={ this.HandleDescricao } />
         </label>
 
         <button type="button" onClick={ this.HandleButton }>

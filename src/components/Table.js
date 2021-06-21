@@ -71,6 +71,7 @@ class Table extends React.Component {
               <td>Real</td>
               <td>
                 <button
+                  className="wallet-table-button"
                   type="button"
                   onClick={ (event) => {
                     event.preventDefault();
