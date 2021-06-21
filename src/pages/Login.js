@@ -49,32 +49,43 @@ class Login extends React.Component {
     const { firstDispatchGetEmail, history: { push } } = this.props;
 
     return (
-      <form>
-        <input
-          type="email"
-          placeholder="email"
-          data-testid="email-input"
-          onChange={ (event) => this.HandleEmail(event) }
-        />
-        <input
-          type="password"
-          placeholder="senha"
-          data-testid="password-input"
-          onChange={ (event) => this.HandlePass(event) }
-        />
-        <button
-          type="button"
-          disabled={ this.HandleValidate() }
-          onClick={ () => {
-            firstDispatchGetEmail(emailInput);
-            push('/carteira');
-            // uso essa função que está dentro do history para assim não precisar usar o Link do router e o botão ficar realmente desabilitado, fiz isso com ajuda do intrutor Gabriel
-          } }
-        >
-          Entrar
-          {/* <Link to="/carteira">Entrar</Link> */}
-        </button>
-      </form>
+      <section className="login-section">
+        
+        <div className="login-form">
+          <h2>TRYBE Wallet</h2>
+          <p>O melhor jeito de controlar seus gastos!</p>
+          <p>Teste agora!</p>
+          <form>
+            <input
+              type="email"
+              placeholder="  email"
+              data-testid="email-input"
+              onChange={ (event) => this.HandleEmail(event) }
+            />
+            <input
+              type="password"
+              placeholder="  senha"
+              data-testid="password-input"
+              onChange={ (event) => this.HandlePass(event) }
+            />
+            <button
+              type="button"
+              disabled={ this.HandleValidate() }
+              onClick={ () => {
+                firstDispatchGetEmail(emailInput);
+                push('/carteira');
+                // uso essa função que está dentro do history para assim não precisar usar o Link do router e o botão ficar realmente desabilitado, fiz isso com ajuda do intrutor Gabriel
+              } }
+            >
+              Entrar
+              {/* <Link to="/carteira">Entrar</Link> */}
+            </button>
+          </form>
+        </div>
+        
+        <div className="login-img" />
+
+      </section>
     );
   }
 }
