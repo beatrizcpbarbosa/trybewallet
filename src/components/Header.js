@@ -7,16 +7,16 @@ class Header extends React.Component {
     const { email, totalValue } = this.props;
     console.log(totalValue);
     return (
-      <section>
-        <div>
-          <span> Email: </span>
+      <section className="wallet-header">
+        <div className="wallet-margin">
+          <span className="wallet-bolder"> Email: </span>
           <span data-testid="email-field">
             { email }
           </span>
         </div>
 
-        <div>
-          <span> Despesas totais: </span>
+        <div className="wallet-margin">
+          <span className="wallet-bolder"> Despesas totais: </span>
           <span data-testid="total-field">
             { totalValue === undefined ? 0 : totalValue.toFixed(2)}
           </span>
