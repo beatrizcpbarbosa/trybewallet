@@ -11,3 +11,12 @@ An online wallet where you can record your expenses and convert them from other 
 - React Redux
 - API Request
 - Assync and Promises
+
+### How to run the project
+- Download the project
+
+>     yarn add
+>     npm install
+
+>     yarn start
+>     npm start
